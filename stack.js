@@ -30,7 +30,14 @@ class Stack {
 
     topNode.next = null;
     this.length--;
-    
+
+    return topNode;
+  }
+
+  peek() {
+    if (this.top === null) return undefined;
+    let topNode = this.top;
+    topNode.next = null;
     return topNode;
   }
 }
@@ -42,5 +49,5 @@ console.log(stack.push(3));
 console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.pop());
-console.log(stack.pop());
+console.log(stack.peek());
 console.log(stack);
