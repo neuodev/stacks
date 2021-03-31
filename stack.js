@@ -40,6 +40,10 @@ class Stack {
     topNode.next = null;
     return topNode;
   }
+  isEmpty() {
+    if (this.length === 0) return true;
+    return false;
+  }
 }
 
 const stack = new Stack();
@@ -50,4 +54,5 @@ console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.peek());
+console.log(stack.isEmpty());
 console.log(stack);
