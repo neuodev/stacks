@@ -21,10 +21,26 @@ class Stack {
     this.length++;
     return node;
   }
+
+  pop() {
+    if (this.top === null) return false;
+
+    const topNode = this.top;
+    this.top = this.top.next;
+
+    topNode.next = null;
+    this.length--;
+    
+    return topNode;
+  }
 }
 
 const stack = new Stack();
 console.log(stack.push(1));
 console.log(stack.push(2));
 console.log(stack.push(3));
+console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.pop());
 console.log(stack);
