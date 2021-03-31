@@ -19,7 +19,6 @@ function reverseString(str: any) {
   }
 
   str = str.join('');
-  console.log(str);
 
   return str;
 }
